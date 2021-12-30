@@ -1,5 +1,5 @@
 import pygame
-
+import os
 from vibor import Vibor
 from start import Start
 from saund import Saund
@@ -15,13 +15,18 @@ st=Start(wight,height)
 fprog=open("prog.txt","r+")
 fnum=open("number.txt","r+")
 fork=0
-p=Progress(0,0,wight,height)
+num=0
+if os.path.getsize("number.txt")!=0:
+          num=int(fnum.read(1))
+if os.path.getsize("prog.txt")!=0:
+          fork=int(fprog.read(1))
+flevel=open("level.txt","r+")
+level=flevel.read(1)          
+p=Progress(int(level),fork,wight,height)
 cur=Cursor(pygame.mouse.get_pos()[0],pygame.mouse.get_pos()[1])
 text=pygame.font.SysFont("arial",30)
 kerst=Vibor("m_krest_12.png",60,height/13,0)
 m=pygame.sprite.Group()
-flevel=open("level.txt","r+")
-level=flevel.read(1)
 text_setia=text.render("Вы хотите переиграть серию " + level + " ?",True,(128,0,0))
 text_sets=text.render("Вы хотите перезапустить сезон ?",True,(128,0,0))
 yes=Vibor("da.png",100,height/2 + 100,0)
@@ -42,7 +47,6 @@ animwait=[pygame.image.load("gif-splitter (1)/1.png"),pygame.image.load("gif-spl
           pygame.image.load("gif-splitter (1)/15.png"),pygame.image.load("gif-splitter (1)/16.png"),
           pygame.image.load("gif-splitter (1)/17.png"),pygame.image.load("gif-splitter (1)/18.png")]
 clock= pygame.time.Clock()
-num=0
 flagm=False
 flagp=False
 flagrec=False
