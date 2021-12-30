@@ -126,7 +126,7 @@ def two():
            elif num==3:
                screen.blit(text.render("Кто мог приходить к убитой", True, (128, 0, 0)), (80,420))
            else:
-               screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80,420))
+               screen.blit(text.render("Надо значит найти врача", True, (128, 0, 0)), (80,420))
         else:
            screen.blit(pygame.image.load("kadr_babka_blondinka.png"),(0,-100))
            screen.blit(pygame.image.load("m_dialogovoe_okno (1).png"), (70,400))
