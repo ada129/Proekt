@@ -60,20 +60,20 @@ def one():
         screen.blit(pygame.image.load("fon_vaska.png"),(0,0))
         screen.blit(pygame.image.load("m_dialogovoe_okno (1).png"),(70,250))
         if num==0:
-            screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 100))
+            screen.blit(text.render("Весной 2000 года соверешено жесткое убийство", True, (128, 0, 0)), (80, 100))
         else:
-            screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 100))
+            screen.blit(text.render("В квартире на Васильевском острове был обнаружен труп пожилой женщины бывшей примы балерины Елизаветы Петровны Пирсовой", True, (128, 0, 0)), (80, 100))
     elif num==2:
         screen.blit(pygame.image.load("fon_kvartira.png"),(0,0))
         screen.blit(pygame.image.load("m_dialogovoe_okno (1).png"), (70, 250))
-        screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 100))
+        screen.blit(text.render("На ее шеи преступники  затянули капроновые чулки. Из квартиры пропали ценные вещи.", True, (128, 0, 0)), (80, 100))
     elif num>2 and num<5:
         screen.blit(pygame.image.load("fon_kvartira_i_sledovatel.png"),(0,0))
         screen.blit(pygame.image.load("m_dialogovoe_okno (1).png"), (70,400))
         if num==3:
-            screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 100))
+            screen.blit(text.render("Убийцы не оставили ни одного следа, ни одного отпечатка пальцев.", True, (128, 0, 0)), (80, 100))
         elif num==4:
-            screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 100))
+            screen.blit(text.render("Я заметил странное, что на двери нет следов взлома. Кому могла открыть дверь осторожная женщина?", True, (128, 0, 0)), (80, 100))
     elif num==5:
             screen.blit(pygame.image.load("fon_kvartira_i_sledovatel.png"), (0, 0))
             screen.blit(pygame.image.load("m_okno_vybora .png"),(60,400))
@@ -83,10 +83,10 @@ def one():
     elif num==6:
         screen.fill((0, 0, 0))
         if fork==1:
-          screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80,200))
+          screen.blit(text.render("Меня тоже обокрали, представлеяте ко мне пришел врач, сделал укол и я уснула. Просыпаюсь, а в квартре ничего нет. Ходят тут кто хочет. Вот поэтому так и случается.", True, (128, 0, 0)), (80,200))
           screen.blit(pygame.image.load("sumashedshaya_babka_2.png"),(100,475))
         else:
-            screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 200))
+            screen.blit(text.render("Пропал антиквариант: дорогая ваза", True, (128, 0, 0)), (80, 200))
             screen.blit(pygame.image.load("vaza.png"),(150,350))
     elif num==7:
         s.adjustment(0.5)
@@ -111,25 +111,25 @@ def two():
     if num==0:
         screen.blit(pygame.image.load("fon_kvartira_babaka_2.png"),(0,0))
         screen.blit(pygame.image.load("m_dialogovoe_okno (1).png"), (70, 250))
-        screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 270))
+        screen.blit(text.render("В квартире была убита Зоя Тихоновна Степанова, человек заслуженный и известный. Ее удавили чулком. Пропали ордена и медали.", True, (128, 0, 0)), (80, 270))
     elif num>=1 and num<=5:
         if num%2!=0:
            screen.blit(pygame.image.load("fon_kvartira_babaka_2.png"), (0, 0))
            screen.blit(pygame.image.load("sledovatel_2.png"), (50,80))
            screen.blit(pygame.image.load("m_dialogovoe_okno (1).png"), (70,400))
            if num==1:
-               screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80,420))
+               screen.blit(text.render("Очень странно, потерпевшая снова сама впустила в квартиру.", True, (128, 0, 0)), (80,420))
            elif num==3:
-               screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80,420))
+               screen.blit(text.render("Кто мог приходить к убитой", True, (128, 0, 0)), (80,420))
            else:
                screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80,420))
         else:
            screen.blit(pygame.image.load("kadr_babka_blondinka.png"),(0,-100))
            screen.blit(pygame.image.load("m_dialogovoe_okno (1).png"), (70,400))
            if num==2:
-                screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 420))
+                screen.blit(text.render("Она всегда была осторожной и никогда не впустила бы чужого в квартиру", True, (128, 0, 0)), (80, 420))
            else:
-               screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80,420))
+               screen.blit(text.render("Она часто болела, кроме меня и врача больше было некому.", True, (128, 0, 0)), (80,420))
     elif num>=6 and num<=10 :
            if num%2==0:
              screen.blit(pygame.image.load("kadr_magazin_antikvariat.png"),(0,0))
@@ -140,16 +140,16 @@ def two():
                 sm.play(1)
                 screen.blit(text.render("...", True, (128, 0, 0)), (80, 420))
              elif num==8:
-                 screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 420))
+                 screen.blit(text.render("Здравствуйте, чем могу помочь?", True, (128, 0, 0)), (80, 420))
              else:
-                 screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 420))
+                 screen.blit(text.render("Нет, первы раз вижу, такие дорогие вещи я бы не забыл. Еще могу чем нибудь помочь?", True, (128, 0, 0)), (80, 420))
            else:
                if num!=9:
                   screen.blit(pygame.image.load("kadr_magazin_antikvariat.png"),(0,0))
                   screen.blit(pygame.image.load("sledovatel_2.png"),(1,70))
                   screen.blit(pygame.image.load("m_dialogovoe_okno (1).png"), (70,400))
                   if num==7:
-                      screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 420))
+                      screen.blit(text.render("К вам не поступал антиквариант: дорогая ваза, ордены и медали?", True, (128, 0, 0)), (80, 420))
                else:
                    screen.fill((0,0,0))
                    screen.blit(text.render("показать продавцу", True, (128, 0, 0)), (80,200))
@@ -178,13 +178,13 @@ def three():
        if num==0:
            screen.blit(text.render("Войдите", True, (128, 0, 0)), (80, 420))
        elif num==1:
-           screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 420))
+           screen.blit(text.render("От чего умерли потерпевшие?", True, (128, 0, 0)), (80, 420))
        elif num==2:
-           screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 420))
+           screen.blit(text.render("Пожилые женщины умерли от острой сердечной недостаточности", True, (128, 0, 0)), (80, 420))
        elif num==3:
-           screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 420))
+           screen.blit(text.render("Что нибудь еще есть?", True, (128, 0, 0)), (80, 420))
        elif num==4:
-           screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 420))
+           screen.blit(text.render("На локтевом сгибе есть укол.", True, (128, 0, 0)), (80, 420))
        if num==0:
            sd.play(1)
            s.adjustment(0.3)
@@ -194,23 +194,23 @@ def three():
     elif num==5:
         screen.blit(pygame.image.load("kadr_mnogoetazhka.png"),(0,0))
         screen.blit(pygame.image.load("m_dialogovoe_okno (1).png"), (70, 250))
-        screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 270))
+        screen.blit(text.render("Запутанное дело, обе женщины были здоровы и никогда не образали к врачам. Может все дело в уколе. Но кто сделал этот укол?", True, (128, 0, 0)), (80, 270))
     elif num>=6 and num<=9:
         screen.blit(pygame.image.load("kadr_mnogoetazhka.png"),(0,0))
         if num%2==0:
            screen.blit(pygame.image.load("Babki_spletnitsy.png"),(0,100))
            screen.blit(pygame.image.load("m_dialogovoe_okno (1).png"), (70,400))
            if num==6:
-               screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 420))
+               screen.blit(text.render("Что-то страшное происходит, убивают старушек, ради выгоды, хотят наши квартиры получить.", True, (128, 0, 0)), (80, 420))
            else:
-               screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 420))
+               screen.blit(text.render("Никого мы не знаем, но убили ее из-за богатсва и квартиры!!!", True, (128, 0, 0)), (80, 420))
         else:
             screen.blit(pygame.image.load("sledovatel_yulya.png"),(100,70))
             screen.blit(pygame.image.load("m_dialogovoe_okno (1).png"), (70,400))
             if num==7:
-               screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 420))
+               screen.blit(text.render("Здравствуйте, вы знали Фокину?", True, (128, 0, 0)), (80, 420))
             else:
-                screen.blit(text.render("юля тут писать", True, (128, 0, 0)), (80, 420))
+                screen.blit(text.render("Версия про квартиру и деньги отпадает сразу, так как особой выгоды от этого убицы не получают. Но что же вкалывают пенсионеркам?", True, (128, 0, 0)), (80, 420))
         if num == 6:
             sb.play(1)
             s.adjustment(0.3)
